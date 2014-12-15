@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+  <canvas id="webyWorld" width="300" height="300" style="border:1px solid black;">
+  	Your browser does not support Canvas.
+  </canvas>
+  <script>
+    var canvas = document.getElementById("webyWorld");
+    var context = canvas.getContext("2d");
+    
+    //Kopf
+    context.beginPath();
+    context.arc(138, 200, 28, 0, Math.PI*2, true);
+    context.lineWidth = 5;
+    context.stroke();
+    context.beginPath();
+    context.arc(138, 200, 28, 0, Math.PI*2, true);
+    context.fillStyle = "#dedede";
+    context.fill();
+    
+    //Linkes Augen
+    context.beginPath();
+    context.arc(56, 176, 4, 0, Math.PI*2);
+    context.lineWidth = 2;
+    context.stroke();
+    
+    //Rechtes Augen
+    context.beginPath();
+    context.arc(89, 60, 4, 0, Math.PI*2);
+    context.lineWidth = 2;
+    context.stroke();
+    
+    //Linker Arm
+    context.beginPath();
+    context.moveTo(120, 235);
+    context.lineTo(106, 240);
+    context.lineWidth = 10;
+    context.lineCap = "round";
+    context.strokeStyle = "black";
+    context.stroke();
+    
+    //Rechter Arm
+    context.beginPath();
+    context.moveTo(160, 235);
+    context.lineTo(174, 240);
+    context.lineWidth = 10;
+    context.lineCap = "round";
+    context.strokeStyle = "black";
+    context.stroke();
+    
+    //Korpus
+    context.fillStyle = "#6a6a6a";
+    context.fillRect(120, 220, 40, 30);
+    context.strokeStyle = "black";
+    context.lineWidth = "2";
+    context.strokeRect(120, 220, 40, 30)
+
+    //Linkes Bein
+    context.fillStyle = "#a8a8a8";
+    context.fillRect(235, 20, 15, 20);
+    context.strokeStyle = "black";
+    context.lineWidth = "2";
+    context.strokeRect(235, 20, 14, 19)
+    
+    //Rechtes Bein
+    context.fillStyle = "#a8a8a8";
+    context.fillRect(23, 274, 15, 20);
+    context.strokeStyle = "black";
+    context.lineWidth = "2";
+    context.strokeRect(23, 274, 14, 19)
+    
+    //Linker Fuß
+    context.fillStyle = "red";
+    context.fillRect(94, 157, 20, 7)
+    context.strokeStyle = "black";
+    context.lineWidth = "2";
+    context.strokeRect(94, 157, 20, 7)
+    
+    //Rechter Fuß
+    context.fillStyle = "red";
+    context.fillRect(169, 81, 20, 7)
+    context.strokeStyle = "black";
+    context.lineWidth = "2";
+    context.strokeRect(169, 81, 20, 7)
+    
+  </script>
+</body>
+</html>

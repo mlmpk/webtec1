@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Buchungsformular</title>
+<meta name="author" content="Maik">
+<meta name="description" content="Buchungsformular Reise.de">
+<meta name="keywords" content="urlaub, buchung, reise">
+<meta name="date" content="2001-12-15T08:49:37+02:00">
+</head>
+
+<style>
+ #tooltip{
+ 	position: absolute;
+ 	background-color: #FFFFFF;
+ 	border: 1px solid #72B0E6;
+ 	font-family: Verdana;
+ 	font-size: 12px;
+ 	color: #1A80DB;
+ 	visibility: hidden;
+ }
+</style>
+
+<script type="text/javascript" src="jstooltip.js"></script>
+<script type="text/javascript">
+
+function validate(form){
+	var hinflug = form.elements["hinflug"].value;
+	
+	if(hinflug == 'tt.mm.jjjj' || hinflug == '')
+	{
+		alert("Bitte Hinflugdatum angeben!");
+		return false;
+	}
+	
+	var rueckflug = form.elements["rueckflug"].value;
+	
+	if(rueckflug == 'tt.mm.jjjj' || rueckflug == '')
+	{
+		alert("Bitte Rueckflugdatum angeben!");
+		return false;
+	}
+	
+	var destination = form.elements["radios_dest"].value;
+	if(destination == ""){
+		alert("Bitte Zielort angeben!");
+		return false;
+	}
+	
+	var vorname = form.elements["vorname"].value;
+	var nachname = form.elements["nachname"].value;
+	
+	if( vorname == "" || nachname == "")
+	{
+		alert("Bitte Namen eingeben!");
+		return false;
+	}
+	
+	var email = form.elements["email"].value;
+	
+	if(email == ""){
+		alert("Bitte E-Mail Adresse eingeben!");
+		return false;
+	}
+	return true;
+	
+}
+
+
+</script>
+
+
+<body onload="init(500);">
+
+<div id="tooltip" class="tooltip"></div>
+
+<form method="post" action="Buchungsformular.html" onsubmit="return validate(this);">
+	<table width="520px" border="1" cellpadding="2">
+		<tr>
+			<td colspan="5">
+			<img alt="Buchungsformular" src="banner.jpg" height="150px" width="100%" alt="Hier sollte ein Bild sein!">
+		</tr>
+		<tr>
+			<td colspan="2">Hinflugdatum:</td>
+			<td><input type="text" size="18" maxlength="10" name="hinflug" id="hinflug" value="tt.mm.jjjj" onmouseover="tip('Hier geben sie was ein!')" onmouseout="untip()"></td>
+			<td colspan="2"><input type="radio" name="radios" value="Berlin" checked="checked" id="BerlinRadio"><label for="BerlinRadio">Berlin</label><input type="radio" name="radios" value="München" id="MuenchenRadio"><label for="MuenchenRadio">München</label></td>
+		</tr>
+		<tr>
+			<td colspan="2">Rückflugdatum:</td>
+			<td><input type="text" size="18" maxlength="10" name="rueckflug" id="rueckflug" value="tt.mm.jjjj"></td>
+			<td colspan="2"><input type="radio" name="radios_dest" value="Rom"  id="RomRadio"><label for="RomRadio">Rom</label><input type="radio" name="radios_dest" value="Istanbul" id="IstanbulRadio"><label for="IstanbulRadio">Istanbul</label></td>
+		</tr>
+		<tr>
+			<td colspan="2">Fluggesellschaft:</td>
+			<td>
+				<select size="1" name="airline" id="airline" >
+					<option>Air Berlin</option>
+					<option selected="selected">Lufthansa</option>
+					<option>Air France</option>
+				</select>
+			</td>
+			<td colspan="2">
+				<input type="checkbox" name="directFlight" id="directFlight" checked="checked"><label for="directFlight">Nur Direktflüge</label>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">Anzahl Personen:</td>
+			<td><select size="1" name="persons" id="persons" >
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+				</select></td>
+			<td>Klasse:</td>
+			<td><select size="1" name="class" id="class" >
+					<option selected="selected">Economy</option>
+					<option>Business</option>
+					<option>First</option>
+				</select></td>
+		</tr>
+		
+		<tr><td colspan="5">&nbsp;</td></tr>
+		
+		<tr>
+			<td rowspan="3">Persönliche Daten:</td>
+			<td>Vorname:</td>
+			<td><input type="text" name="vorname" id="vorname" size="18" maxlength="30" onmouseover="tooltip(event,'Hier sollte ihr Vorname rein!')" onmousemove="updateToolTipPos(event)"></td>
+			<td>Nachname:</td>
+			<td><input type="text" name="nachname" id="nachname" size="18"></td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td colspan="3"><input type="text" name="email" id="email" size="56"></td>
+		</tr>
+		<tr>
+			<td colspan="4"><textarea cols="52" rows="5" name="Anmerkungen" id="anmerkungen">Anmerkungen:</textarea></td>
+		</tr>
+		<tr>
+			<td colspan="3"><input type="submit" value="Senden"></td>
+			<td colspan="2"><input type="reset" value="Zurücksetzen"></td>
+		</tr>
+	</table>
+</form>
+
+<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a></p>
+
+</body>
+</html>
