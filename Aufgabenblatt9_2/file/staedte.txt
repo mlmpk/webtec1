@@ -1,0 +1,50 @@
+Aachen
+Augsburg
+Berlin
+Bielefeld
+Bochum
+Bonn
+Braunschweig
+Bremen
+Chemnitz
+Dortmund
+Dresden
+Düsseldorf
+Duisburg
+Erfurt
+Essen
+Frankfurt am Main
+Freiburg im Breisgau
+Gelsenkirchen
+Hagen
+Halle (Saale)
+Hamburg
+Hamm
+Hannover
+Herne
+Karlsruhe
+Kassel
+Kiel
+Köln
+Krefeld
+Leipzig
+Leverkusen
+Ludwigshafen am Rhein
+Lübeck
+Magdeburg
+Mainz
+Mannheim
+Mönchengladbach
+Mülheim an der Ruhr
+München
+Münster
+Nürnberg
+Oberhausen
+Oldenburg
+Osnabrück
+Rostock
+Saarbrücken
+Solingen
+Stuttgart
+Wiesbaden
+Wuppertal
