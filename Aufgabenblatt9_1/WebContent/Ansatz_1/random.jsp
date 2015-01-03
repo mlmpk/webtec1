@@ -9,12 +9,7 @@
 </head>
 <body>
 
-
-
-
 <%
-
-
 
 	Random random = new Random();
 	
@@ -26,13 +21,7 @@
 		counter++;
 	}
 
-
-
 %>
-
-
-
-
 
 </body>
 </html>
