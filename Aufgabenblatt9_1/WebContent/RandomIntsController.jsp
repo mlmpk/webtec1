@@ -12,25 +12,18 @@
 <body>
 
 <%
-
 	RandomIntsBean randomInts = new RandomIntsBean();
 	
 	Random random = new Random();
 	
-	int counter = 0;
-	
+	int counter = 0;	
 	while(counter < 10){
 		randomInts.getRandomInts().add(random.nextInt());
 		counter++;
 	}
 
 	response.getWriter().write(randomInts.toString());
-
 %>
-
-
-
-
 
 </body>
 </html>

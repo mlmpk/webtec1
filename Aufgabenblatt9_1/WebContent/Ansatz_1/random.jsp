@@ -10,7 +10,6 @@
 <body>
 
 <%
-
 	Random random = new Random();
 	
 	int counter = 0;
@@ -20,7 +19,6 @@
 		out.println("<br>");
 		counter++;
 	}
-
 %>
 
 </body>

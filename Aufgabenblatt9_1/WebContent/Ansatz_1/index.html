@@ -6,44 +6,10 @@
 </head>
 <body>
 
-
-<script type="text/javascript">
-
-
-	function getRandomIntegers(){
-		
-		 var xmlhttp;
-	 
-	        var url="random.jsp";
-	        if (window.XMLHttpRequest)
-	        {
-	            xmlhttp=new XMLHttpRequest();
-	        }
-	        else
-	        {
-	            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	        }
-	        xmlhttp.onreadystatechange=function()
-	        {
-	            if (xmlhttp.readyState==4 && xmlhttp.status==200)
-	            {
-	                document.getElementById("randomIntegers").innerHTML=xmlhttp.responseText;
-	            }
-	        }
-
-	        xmlhttp.open("GET", url, true);
-	        xmlhttp.send();
-
-	}
-
-
-</script>
-
+<script type="text/javascript" src="./js/ajaxcall.js"></script>
 
 <button type="button" onclick='getRandomIntegers()'> Randomize me! </button>
-
 <div id="randomIntegers"></div>
-
 
 </body>
 </html>
