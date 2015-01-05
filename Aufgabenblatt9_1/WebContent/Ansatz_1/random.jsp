@@ -8,18 +8,14 @@
 <title>Random Integers</title>
 </head>
 <body>
-
-<%
-	Random random = new Random();
+	<ol>
+	<%
+		Random random = new Random();
 	
-	int counter = 0;
-
-	while(counter < 10){
-		out.println(random.nextInt());
-		out.println("<br>");
-		counter++;
-	}
-%>
-
+		for(int i = 0; i < 10; i++){
+			out.println("<li>"+random.nextInt()+"</li>");
+		}
+	%>
+	</ol>
 </body>
 </html>

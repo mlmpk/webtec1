@@ -1,5 +1,5 @@
 function getRandomIntegers() {
-
+	
 	var xmlhttp;
 
 	var url = "RandomIntsController.jsp";
@@ -17,4 +17,15 @@ function getRandomIntegers() {
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 
+}
+
+
+function getRandomIntegersWithJQuery(){		
+	$.ajax({
+		  type: "POST",
+		  url: "RandomIntsController.jsp",
+		})
+		  .done(function( response ) {
+			$("#randomIntegers").html(response);
+		});		
 }

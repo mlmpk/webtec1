@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
-<%@ page import="java.util.*" %>
-<%@ page import="model.RandomIntsBean" %>
+<%@ page import="java.util.ArrayList" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,19 +11,17 @@
 </head>
 <body>
 
-<%
-	RandomIntsBean randomInts = new RandomIntsBean();
+<jsp:useBean id="RandomBean" class="model.RandomIntsBean" scope="session"></jsp:useBean>
 	
-	Random random = new Random();
+	<ol>
+	<%
+		ArrayList<Integer> randomIntsList = RandomBean.getRandomIntsList();
 	
-	int counter = 0;	
-	while(counter < 10){
-		randomInts.getRandomInts().add(random.nextInt());
-		counter++;
-	}
-
-	response.getWriter().write(randomInts.toString());
-%>
+		for(Integer item : randomIntsList){%>
+			<li><%=item %></li><% 
+		}
+	%>
+	</ol>
 
 </body>
 </html>
