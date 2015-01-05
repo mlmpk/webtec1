@@ -15,7 +15,7 @@
 	
 	<ol>
 	<%
-		ArrayList<Integer> randomIntsList = RandomBean.getRandomIntsList();
+		ArrayList<Integer> randomIntsList = RandomBean.getNewRandomIntsList();
 	
 		for(Integer item : randomIntsList){%>
 			<li><%=item %></li><% 
