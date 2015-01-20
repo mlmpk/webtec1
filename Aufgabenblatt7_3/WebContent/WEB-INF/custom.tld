@@ -1,0 +1,24 @@
+<taglib>
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>2.0</jsp-version>
+  <short-name>Example TLD</short-name>
+  <tag>
+    <name>ggT</name>
+    <tag-class>tags.GgtTagHandler</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+    	<description>Zahl 1</description>
+       <name>zahl1</name>
+       <required>true</required>
+       <rtexprvalue>true</rtexprvalue>
+       <type>java.lang.integer</type>
+    </attribute>
+    <attribute>
+    	<description>Zahl 2</description>
+       <name>zahl2</name>
+       <required>true</required>
+       <rtexprvalue>true</rtexprvalue>
+       <type>java.lang.integer</type>
+    </attribute>
+  </tag>
+</taglib>
