@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zeitgeber</title>
+<link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div>
+		<label for="nutzernamen">Nutzername: </label>
+		<input type="text" id="nutzernamen">
+		<input type="button" value="Zeit holen" onclick="sendMessage()">
+		<input type="button" value="Trennen" onclick="closeConnection()">
+	</div>
+	<div class="status">Verbindungsstatus: </div>
+	<div id="status" class="circle"></div>
+
+	<div class="serverresponse">Serverantwort: </div>
+	<div id="serverresponse"></div>
+
+</body>
+
+<script type="text/javascript" src="./js/websocket.js"></script>
+
+</html>

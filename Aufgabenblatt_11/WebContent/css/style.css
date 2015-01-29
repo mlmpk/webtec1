@@ -1,0 +1,26 @@
+.status {
+	float:left;
+}
+
+.circle {
+  display: block; 
+  background: yellow;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  float:left;
+  
+}
+
+.circle.red{
+	background: red;
+}
+
+.circle.green{
+	background: green;
+}
+
+.serverresponse{
+	clear: left;
+}
