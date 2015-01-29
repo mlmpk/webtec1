@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://localhost:8080/Aufgabenblatt11/zeitgeber");
+var ws = new WebSocket("ws://localhost:8080/Aufgabenblatt_11/zeitgeber");
 
 ws.onopen = function() {
 	document.getElementById("status").className = "circle green";
